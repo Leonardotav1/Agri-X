@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Kotta+One&family=Krona+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    margin: 0%;
+}
+#Header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #4F7302;
+    font-family: "Roboto";
+    font-weight: 300;
+    color: white;
+    padding: 0 2vw 0 2vw;
+    box-shadow: 0px 2px 5px black;
+}
+#options-hd{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4vw;
+    cursor: pointer;
+}
+#btn-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 9vw;
+    height: 2vw;
+    background-color: #84C102;
+    color: white;
+    border: solid 2px white;
+    border-radius: 2px;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: larger;
+    cursor:pointer;
+}
+#card-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2vw 2vw 0 2vw;
+    align-items: center;
+    background: linear-gradient(14deg, rgb(255, 255, 255) 40%, #51fe5f 100%);
+}
+#card-1 h1{
+    width: 50%;
+    font-family: "Krona One";
+    font-weight: 400;
+    font-size: 1.6vw;
+}
+#card-1 hr{
+    width: 50%;
+    border: none;
+    border-top: 3px dashed black;
+    margin: 0%;
+}
+#card-1 h3{
+    width: 39%;
+    font-family: "Roboto";
+    font-size: 1.2vw;
+    font-weight: 400;
+    color: gray;
+}
+#btn-card1{
+    display: flex;
+    width: 12vw;
+    height: 2.7vw;
+    align-items: center;
+    justify-content: center;
+    background-color: #84C102;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font:1.4vw "Roboto" ;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.2s ;
+}
+#btn-card1:hover{
+    transform: scale(1.05);
+    background-color: #79b002;
+}
