@@ -42,15 +42,15 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 2vw 2vw 0 2vw;
+    padding: 5vw 2vw 7vw 2vw;
     align-items: center;
     background: linear-gradient(14deg, rgb(255, 255, 255) 40%, #51fe5f 100%);
 }
 #card-1 h1{
-    width: 50%;
+    width: 60%;
     font-family: "Krona One";
     font-weight: 400;
-    font-size: 1.6vw;
+    font-size: 2vw;
 }
 #card-1 hr{
     width: 50%;
@@ -59,9 +59,9 @@ body{
     margin: 0%;
 }
 #card-1 h3{
-    width: 39%;
+    width: 55%;
     font-family: "Roboto";
-    font-size: 1.2vw;
+    font-size: 1.4vw;
     font-weight: 400;
     color: gray;
 }
@@ -83,4 +83,208 @@ body{
 #btn-card1:hover{
     transform: scale(1.05);
     background-color: #79b002;
+}
+#card-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #4F7302; 
+    color: white;
+}
+#texts-card2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#texts-card2 h1{
+    display: flex;
+    justify-content: center;
+    font-family: "Krona One";
+    font-weight: 400;
+    font-size: 2.5vw;
+    margin-bottom: 5px;
+}
+#texts-card2 h2{
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Kotta One";
+    font-size: 2vw;
+    margin: 0%;
+    font-weight: 400;
+}
+#btns-card2{
+    display: flex;
+    gap: 10vw;
+    margin: 3vw;
+}
+#btns-card2 button{
+    display: flex;
+    width: 13vw;
+    height: 3vw;
+    align-items: center;
+    justify-content: center;
+    background-color: #4F7302;
+    border: solid 2px white;
+    color: white;
+    font-family: "Roboto";
+    font-size: 1.4vw;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+#btns-card2 button:hover{
+    background-color: #364e01;
+}
+#cards-card2{
+    display: flex;
+    flex-direction: row;
+}
+#cards-card2 img{
+    width: 80px;
+    text-align: center;
+    margin-top: 1.5vw;
+}
+.mini-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    color: black;
+    margin: 5vw;
+    transition: all 0.5s; 
+}
+.mini-card:hover{
+    transform: scale(1.05);
+}
+.texts-minicard{
+    margin: 2vw;
+    font-family: "Krona One";
+}
+.texts-minicard h1{
+    margin: 0%;
+    font-weight: 400;
+    font-size: 2vw;
+}
+.texts-minicard hr{
+    height: 2px;
+    background-color: black;
+}
+.texts-minicard h3{
+    margin: 0%;
+    font-weight: 400;
+    font-size: 1.4vw;
+}
+#Planos{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 4vw 0;
+}
+#text-planos{
+    margin-left: 4vw;
+}
+#text-planos h1{
+    font-family: "Krona One";
+    font-weight: 400;
+    font-size: 2.5vw;
+    margin-bottom: 2px;
+}
+#text-planos h2{
+    font-family: "Roboto";
+    font-weight: 400;
+    color: gray;
+    margin-top: 0%;
+}
+#Planos-val hr{
+    margin: 0%;
+    height: 150pt;
+    color: black;
+    align-self: center;
+    border: solid 1px black;
+}
+#Planos-val{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.valores{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #F0FFE4;
+    border: 2px solid green;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+}
+.valores:hover{
+    background-color:#ccffa2;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.valores h2{
+    margin-bottom: 0%;
+    font-size: 2.8vw;
+    font-family: "Roboto";
+    font-weight: 400;
+}
+.valores h3{
+    color: rgb(255, 168, 6);
+    font-size: 5vw;
+    margin:  30px 20px 10px  20px;
+}
+#cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 4vw;
+    gap: 8vw;
+    align-items: center;
+    
+}
+#text-card4{
+    display: flex;
+    flex-direction: column;
+    font-family: "Krona One";
+    justify-content: center;
+    padding-left: 4vw;
+}
+#text-card4 hr{
+    width: 60%;
+    height: 2px;
+    margin: 0%;
+    background-color: black;
+}
+#title-text{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+.cards-dp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-color: #6DA000;
+    border-radius: 10px 10px 0 0; 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.cards-dp h1{
+    font-family: "Kotta One";
+    font-weight: 400;
+    font-size: 2.5vw;
+}
+.cards-dp h2{
+    font-family: "Kotta One";
+    font-weight: 400;
+    font-size: 2vw;
+    margin: 2vw;
+}
+.cards-dp img{
+    border-radius: 100%;
+    width: 10vw;
 }
