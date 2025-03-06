@@ -288,3 +288,51 @@ body{
     border-radius: 100%;
     width: 10vw;
 }
+#footer_pg{
+    display: flex;
+    background-color: #4F7302;
+    justify-content: space-evenly;
+    padding: 3vw 0;
+}
+#footer_pg hr{
+   margin:0 5vw ;
+}
+.div_social_media{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 0.8vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.div_social_media h2{
+    font-weight: 400;
+}
+.div_ft{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: "Roboto";
+    font-size: 0.8vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+.div_ft h2{
+    font-weight: 400;
+    transition: all 0.2s;
+}
+.div_ft h2:hover{
+    transform: scale(1.05);
+    color: rgb(228, 228, 228);
+}
+#social-images{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    margin-bottom: 2vw;
+}
