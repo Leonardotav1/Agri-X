@@ -3,17 +3,20 @@
 body{
     margin: 0%;
 }
+:root{
+    --fonte-1:'Krona One';
+    --fonte-2:'Kotta One'; 
+    --fonte-3:'Roboto';
+}
 #Header{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     background-color: #4F7302;
-    font-family: "Roboto";
-    font-weight: 300;
+    font: 400 large var(--fonte-3);
     color: white;
     padding: 0 2vw 0 2vw;
-    box-shadow: 0px 2px 5px black;
 }
 #options-hd{
     display: flex;
@@ -33,9 +36,7 @@ body{
     color: white;
     border: solid 2px white;
     border-radius: 2px;
-    font-family: "Roboto";
-    font-weight: 400;
-    font-size: larger;
+    font:400 larger var(--fonte-3);
     cursor:pointer;
 }
 #card-1{
@@ -48,8 +49,7 @@ body{
 }
 #card-1 h1{
     width: 60%;
-    font-family: "Krona One";
-    font-weight: 400;
+    font:300 larger var(--fonte-1);
     font-size: 2vw;
 }
 #card-1 hr{
@@ -60,9 +60,7 @@ body{
 }
 #card-1 h3{
     width: 55%;
-    font-family: "Roboto";
-    font-size: 1.4vw;
-    font-weight: 400;
+    font: 400 1.4vw var(--fonte-3);
     color: gray;
 }
 #btn-card1{
@@ -75,7 +73,7 @@ body{
     color: white;
     border: none;
     border-radius: 10px;
-    font:1.4vw "Roboto" ;
+    font: 1.4vw var(--fonte-3);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     transition: all 0.2s ;
@@ -100,21 +98,16 @@ body{
 #texts-card2 h1{
     display: flex;
     justify-content: center;
-    font-family: "Krona One";
-    font-weight: 400;
-    font-size: 2.5vw;
+    font: 400 2.5vw var(--fonte-1);
     margin-bottom: 5px;
 }
 #texts-card2 h2{
     display: flex;
     width: 60%;
     justify-content: center;
-    align-items: center;
     text-align: center;
-    font-family: "Kotta One";
-    font-size: 2vw;
+    font: 400 2vw var(--fonte-2);
     margin: 0%;
-    font-weight: 400;
 }
 #btns-card2{
     display: flex;
@@ -130,8 +123,7 @@ body{
     background-color: #4F7302;
     border: solid 2px white;
     color: white;
-    font-family: "Roboto";
-    font-size: 1.4vw;
+    font: normal 1.4vw var(--fonte-3);
     transition: all 0.2s;
     cursor: pointer;
 }
@@ -174,8 +166,7 @@ body{
 }
 .texts-minicard h3{
     margin: 0%;
-    font-weight: 400;
-    font-size: 1.4vw;
+    font: 400 1.4vw var(--fonte-1);
 }
 #Planos{
     display: flex;
@@ -186,16 +177,12 @@ body{
     margin-left: 4vw;
 }
 #text-planos h1{
-    font-family: "Krona One";
-    font-weight: 400;
-    font-size: 2.5vw;
+    font: 400 2.5vw var(--fonte-1);
     margin-bottom: 2px;
 }
 #text-planos h2{
-    font-family: "Roboto";
-    font-weight: 400;
-    color: gray;
-    margin-top: 0%;
+    font: 400 larger var(--fonte-3);
+    color: gray;    
 }
 #Planos-val hr{
     margin: 0%;
@@ -227,9 +214,7 @@ body{
 }
 .valores h2{
     margin-bottom: 0%;
-    font-size: 2.8vw;
-    font-family: "Roboto";
-    font-weight: 400;
+    font: 400 2.8vw var(--fonte-3);
 }
 .valores h3{
     color: rgb(255, 168, 6);
@@ -242,14 +227,13 @@ body{
     margin: 4vw;
     gap: 8vw;
     align-items: center;
-    
 }
 #text-card4{
     display: flex;
     flex-direction: column;
     font-family: "Krona One";
     justify-content: center;
-    padding-left: 4vw;
+    margin-left: 4vw;
 }
 #text-card4 hr{
     width: 60%;
@@ -261,7 +245,6 @@ body{
     display: flex;
     align-items: center;
     gap: 10px;
-    
 }
 .cards-dp{
     display: flex;
@@ -274,14 +257,10 @@ body{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 .cards-dp h1{
-    font-family: "Kotta One";
-    font-weight: 400;
-    font-size: 2.5vw;
+    font: 400 2.5vw var(--fonte-2) ;
 }
 .cards-dp h2{
-    font-family: "Kotta One";
-    font-weight: 400;
-    font-size: 2vw;
+    font: 400 2vw var(--fonte-2);
     margin: 2vw;
 }
 .cards-dp img{
@@ -295,15 +274,13 @@ body{
     padding: 3vw 0;
 }
 #footer_pg hr{
-   margin:0 5vw ;
+    margin:0 5vw ;
 }
 .div_social_media{
     display: flex;
     flex-direction: column;
     color: white;
-    font-family: "Roboto";
-    font-weight: 400;
-    font-size: 0.8vw;
+    font: 400 0.8vw var(--fonte-3);
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -315,8 +292,7 @@ body{
     display: flex;
     flex-direction: column;
     color: white;
-    font-family: "Roboto";
-    font-size: 0.8vw;
+    font: normal 0.8vw var(--fonte-3);
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -346,7 +322,6 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
-    
 }
 .modal{
     display: flex;
@@ -359,8 +334,7 @@ body{
     animation: mover 0.6s ease-out ;
 }
 .modal h1{
-    font-family: 'Krona One' ;
-    font-weight: 500;
+    font: 500 xx-large var(--fonte-2);
     margin-bottom: 0;
 }
 .modal hr{
@@ -384,19 +358,15 @@ body{
     display: flex;
     color: white;
     background-color: #84C102;
-    font-family: 'Roboto';
-    font-weight: 350;
+    font: 350 2.5vw var(--fonte-3);
     padding: 0.5vw;
-    font-size: 2.5vw;
     border: 2px solid white;
     border-radius: 10px;
     box-shadow: 2px 2px 1px black;
     cursor:pointer
 }
 .modal p{
-    font-family: 'Kotta One';
-    font-size: 2vw;
-    font-weight: 300;
+    font: 300 2vw var(--fonte-2);
 }
 
 @keyframes mover{
