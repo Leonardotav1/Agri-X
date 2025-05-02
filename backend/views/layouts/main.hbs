@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Agri-x</title>
+
+  {{!-- Css local --}}
+    <link rel="stylesheet" href="public/Styles/initial-page.css" />
+
+</head>
+<body>
+  {{!-- Carregando o header --}}
+  {{> header}} 
+
+  {{!-- Conteúdo da página inicial --}}
+  <section id="card-1">
+        <div id="Texts-card1">
+            <h1>A plataforma perfeita para você produtor, que busca qualidade e preço em suas atividades no campo !</h1>
+            <hr>
+            <h3>Conheça mais sobre o software que vai te ajudar em tudo o que você precisa, não perca tempo e assine já!</h3>
+            <button type="button" id="btn-card1">Cadastre-se</button>
+        </div>
+        <img src="../public/Assets/Images/Logo-card1.png" alt="Logo" width="500vw">
+    </section>
+
+    <section id="card-2">
+        <div id="texts-card2">
+            <h1>Esteja sempre bem informado!</h1>
+            <h2>Nossso sistema oferece o que há de mais completo no mercado para a melhor experiência possível!</h2>
+        </div>
+        <div id="btns-card2">
+            <button>Entre</button>
+            <button>Faça um teste</button>
+        </div>
+        <div id="cards-card2">
+            <div class="mini-card">
+                <img src="../public/Assets/Images/Icon-controle.png" alt="">
+                <div class="texts-minicard">
+                    <h1>Controle</h1>
+                    <hr>
+                    <h3>Mantenha registros detalhados das atividades agrícolas,
+                    desde o plantio até a colheita. Controle pragas, insumos e produtividade para otimizar seus resultados. </h3>
+                </div>
+            </div>
+            <div class="mini-card">
+                <img src="../public/Assets/Images/Icon-planejamento.png" alt="">
+                <div class="texts-minicard">
+                    <h1>Planejamento</h1>
+                    <hr>
+                    <h3>Organize suas tarefas sazonais, escolha as melhores épocas para plantio e colheita
+                    e gerencie os recursos de forma eficiente para garantir uma produção sustentável.</h3>  
+                </div>
+            </div>
+            <div class="mini-card">
+                <img src="../public/Assets/Images/Icon-clima.png" alt="">
+                <div class="texts-minicard">
+                    <h1>Previsão</h1>
+                    <hr>
+                    <h3>Analise dados climáticos, tendências de mercado e produtividade passada para antecipar desafios e tomar decisões estratégicas que aumentem a rentabilidade.</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id=Planos>
+        <div id="text-planos">
+            <h1>Nossos planos!</h1>
+            <h2>Clique e conheça as vantagens</h2>
+        </div>
+        <div id="Planos-val">
+            <div id="Anual-plan" class="valores">
+                <h2>Anual</h2>
+                <h3>R$45,00</h3>
+            </div>
+            <hr>
+            <div id="Semestral-plan" class="valores">
+                <h2>Semestral</h2>
+                <h3>R$50,00</h3>
+            </div>
+            <hr>
+            <div id="Mensal-plan" class="valores">
+                <h2>Mensal</h2>
+                <h3>R$60,00</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="depoimentos">
+        <div id="text-card4">
+            <div id="title-text">
+                <h1>Veja o depoimento de nossos clientes </h1> 
+                <img src="../public/Assets/Images/Icon-avaliação.png" alt="">
+            </div>
+            <hr>
+        </div>
+        <div id="cards">
+            <div class="cards-dp">
+                <h1>Fulano de town</h1>
+                <img src="../public/Assets/Images/Icon-cliente.png" alt="">
+                <!-- Aqui vão as estrelas de avaliação -->
+                <h2>Um dos melhores sistemas que já usei, muito rápido e prático</h2>
+            </div>
+            <div class="cards-dp">
+                <h1>Fulano de town</h1>
+                <img src="../public/Assets/Images/Icon-cliente.png" alt="">
+                <!-- Aqui vão as estrelas de avaliação -->
+                <h2>Um dos melhores sistemas que já usei, muito rápido e prático</h2>
+            </div>
+            <div class="cards-dp">
+                <h1>Fulano de town</h1>
+                <img src="../public/Assets/Images/Icon-cliente.png" alt="">
+                <!-- Aqui vão as estrelas de avaliação -->
+                <h2>Um dos melhores sistemas que já usei, muito rápido e prático</h2>
+            </div>
+        </div>
+    </section>
+
+  {{!-- Carregando o footer --}}
+  {{> footer}}
+
+  <script src="/Scripts/initial-page.js"></script>
+</body>
+</html>

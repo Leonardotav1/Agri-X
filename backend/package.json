@@ -1,0 +1,20 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Projeto pessoal para melhorar conhecimentos o backend",
+  "dependencies": {
+    "consign": "^0.1.6",
+    "express": "^5.1.0",
+    "express-handlebars": "^8.0.1",
+    "method-override": "^3.0.0",
+    "nodemon": "^3.1.10"
+  }
+}
