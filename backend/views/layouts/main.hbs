@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="public/Styles/initial-page.css">
+  <link rel="stylesheet" href="public/Styles/login_sigin.css">
+  <title>Document</title>
+</head>
+<body>
+  {{!-- Carregando o header --}}
+  {{#if showHeader}}
+    {{> header}}
+  {{/if}}
+
+  {{!-- Carregando os conteúdos das pages --}}
+  {{{body}}} 
+
+  {{!-- Carregando o footer --}}
+  {{#if showFooter}}
+    {{>footer}}
+  {{/if}}
+  
+  <script src="/Scripts/initial-page.js"></script>
+  
+</body>
+</html>
