@@ -1,0 +1,121 @@
+#login-page{
+    background: url(../Assets/Images/image-login.png);
+    position: absolute;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+#form_login{
+    background-color: rgba(0, 0, 0, 0.5);
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+#background-login{
+    background-color: #4E7609;
+    height: auto;
+    width: 70vh;
+    display: flex;
+    flex-direction: column;
+    padding: 5vh;
+    border-radius: 10px;
+    align-items: center;
+}
+#cadastro-login{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #4E7609;
+    height:auto;
+    width: 100%;
+}
+#background-login h1{
+    font: 300 larger var(--fonte-2);
+    font-size: 2.5vw;
+    text-align: center;
+    margin: 0%;
+}
+#background-login h2{
+    font: 300 var(--fonte-2);
+    font-size: 1.2vw;
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+#background-login input{
+    width: 100%;
+    height: 4vh;
+    border-radius: 7px;
+    border: none;
+}
+#background-login p{
+    margin : 0;
+    padding : 8px 0px;
+}
+#btn-login{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background-color: #0BA100;
+    color: white;
+    font: 400 larger var(--fonte-3);
+    font-size: 2.5vw;
+    width: 80%;
+    height: 7vh;
+    border-radius: 7px;
+    border: 1px solid white;
+    cursor: pointer;
+    margin: 4vw 0 1vw 0
+}
+#btn_login_sigin{
+    cursor: pointer;
+    margin: 0 0 5px 0;
+    font: 300 var(--fonte-2);
+    text-decoration: underline;
+}
+.input-senha-wrapper{
+    position: relative;
+    width: 100%;
+}
+.input-senha-wrapper input{
+    width: 100%;
+    padding-right: 35px; /* espaço para o ícone */
+    box-sizing: border-box;
+}
+.input-senha-wrapper .toggle-olho {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+    font-size: 18px;
+    color: #555;
+}
+
+
+@media(max-width: 640px){
+    #background-login{
+       margin: 50px;
+    }
+    #background-login h1 {
+        font-size: 5vw;
+    }
+    #background-login h2 {
+        font-size: 3vw;
+    }
+    #cadastro-login{
+        height: 70%;
+    }
+    #btn-login{
+        font-size: 5vw;
+    }
+}
