@@ -12,9 +12,19 @@ module.exports ={
                 // Compara os campos "senha" e "repSenha".
                 if(senha !== repSenha) return res.status(401).json({ msg: 'Senha incorreta, tente novamente' })
 
-                // Cria um usuário e salva no banco de dados.
-                Usuario.create({ nome,email,dataNasc,senha })
+                
                 try{
+                    //Criptografia de senha
+                    const salt = await bcrypt.genSalt()
+                    const hashPass = await bcrypt.hash(senha, salt)
+
+                    // Cria um usuário e salva no banco de dados.
+                    Usuario.create({ 
+                        nome,
+                        email,
+                        dataNasc,
+                        senha: hashPass 
+                    })
                     res.json({ msg: 'Cadastro realizado com sucesso' })
                 }catch(err){
                     console.error(err)
@@ -47,7 +57,7 @@ module.exports ={
         profilePage(req,res){
             res.render('pages/profilePage')
         },
-        //Responsável por verificar verificação do token.
+        //Responsável por verificação do token.
         async profile(req,res){
             try {
                 const usuario = await Usuario.findById(req.userId).select('-senha')
