@@ -1,0 +1,29 @@
+<h1>Aqui estará disponível para o usuário as funcionalidades do site</h1>
+<div id="infoUsuario"></div>
+
+<script>
+    //Função que chama a verficação do token.
+    (async () => {
+        const token = localStorage.getItem('token')
+
+        const res = await fetch('/profile', { 
+            method: 'GET',
+            headers:{ 
+                Authorization: `Bearer ${token}`,
+                'Content-Type':'application/json' 
+            }
+        })
+
+        const data = await res.json()
+
+        if(res.ok){
+            document.getElementById('infoUsuario').innerText = `Usuário: ${data.nome}`
+            console.log(data)
+        }else{
+            alert(data.msg)
+            window.location.href = '/login'
+        }
+    })()
+
+    
+</script>

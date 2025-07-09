@@ -1,0 +1,97 @@
+<section id="login-page">
+    <form id="form_login" action="/cadastro" method="post">
+       <div id="background-login">
+        <h1>Informe seus dados</h1>
+        <h2>É rapidinho 🚀</h2>
+        <div id="cadastro-login">
+            <p>Informe seu nome</p>
+            <input type="text" class="input-login" name="nome" required>
+            <p>Data de Nascimento</p>
+            <input name="dataNasc" type="date" class="input-login" required>
+            <p>Email</p>
+            <input name="email" type="email" class="input-login" required>   
+            <p>Senha</p>
+            <div class="input-senha-wrapper">
+                <input name="senha" type="password" id="senha" class="input-login" required>
+                <span class="toggle-olho" id="toggleSenha">🙈</span>
+            </div>
+            <p>Repita sua senha</p>
+            <div class="input-senha-wrapper">
+                <input name="repSenha" type="password" id="repSenha" class="input-login" required>
+                <span class="toggle-olho" id="toggleSenha2">🙈</span>
+            </div>
+            
+        </div>
+        <button id="btn-login" type="submit">Enviar</button>
+        <h3 id="btn_login_sigin">Já tem uma conta?</h3>
+       </div>
+    </form>
+</section>
+
+<script>
+    const btn_page_cadastro = document.querySelector("#btn_login_sigin").addEventListener("click",()=>{
+        window.location.href = "/login"
+    })
+
+    const senhaInput = document.getElementById('senha')
+    const repSenhaInput = document.getElementById('repSenha')
+    const toggleOlho = document.getElementById('toggleSenha')
+    const toggleOlho2 = document.getElementById('toggleSenha2')
+
+    toggleOlho.addEventListener('click', () => {
+        if (senhaInput.type === 'password') {
+            senhaInput.type = 'text'
+            toggleOlho.innerHTML = '🙉' // muda cor pra indicar ativo
+            senhaInput.focus()
+        }else {
+            senhaInput.type = 'password'
+            toggleOlho.innerHTML = '🙈' // cor normal
+            senhaInput.focus()
+        }    
+    })
+
+    toggleOlho2.addEventListener("click",()=>{
+        if(repSenhaInput.type === 'password'){
+            repSenhaInput.type = 'text'
+            toggleOlho2.innerHTML= '🙉'
+            repSenhaInput.focus()
+        }else{
+            repSenhaInput.type = 'password'
+            toggleOlho2.innerHTML = '🙈'
+            repSenhaInput.focus()
+        }
+    })
+    
+    document.getElementById('form_login').addEventListener('submit', async function(e){
+        e.preventDefault()
+        
+        const nome = e.target.nome.value
+        const email = e.target.email.value
+        const dataNasc = e.target.dataNasc.value
+        const senha = e.target.senha.value
+        const repSenha = e.target.repSenha.value
+        
+        try{
+            const res = await fetch('/cadastro', {
+                method: 'POST',
+                headers:{
+                    'Content-Type':'application/json'
+                },
+                body: JSON.stringify({ nome, dataNasc, email, senha, repSenha })
+            })
+
+            const data = await res.json()
+
+            if(res.ok){
+                alert(data.msg)
+                window.location.href = '/login'
+            }else{
+                return alert(data.msg)
+            }
+        }catch(err){
+            alert("Erro interno do servidor")
+            console.log(err)
+        }
+    
+    })
+</script>

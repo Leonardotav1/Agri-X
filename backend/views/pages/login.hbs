@@ -1,0 +1,54 @@
+<section id="login-page">
+    <form id="form_login" action="/loginPost" method="post">
+        <div id="div_alert"></div>
+       <div id="background-login">
+        <h1>Bem vindo de volta!</h1>
+        <h2>Estamos felizes em tê-lo conosco </h2>
+        <div id="cadastro-login">
+            <p>Email</p>
+            <input type="email" class="input-login" name="email">
+            <p>Senha</p>
+            <input type="password" class="input-login" name="senha">
+        </div>
+        <button type="submit" id="btn-login">Enviar</button>
+        <h3 id="btn_login_sigin" >Ainda não tem uma conta?</h3>
+       </div>
+    </form>
+</section>
+
+<script>
+    document.querySelector("#btn_login_sigin").addEventListener("click", () => {
+        window.location.href = '/sigin'
+    })
+
+    document.getElementById('form_login').addEventListener('submit', async function(e) {
+        e.preventDefault()
+
+        const email = e.target.email.value
+        const senha = e.target.senha.value
+
+        try{
+            const res = await fetch('/loginPost', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, senha })
+            })
+
+            const data = await res.json()
+
+            if (res.ok) {
+                console.log('Login realizado com sucesso')
+                localStorage.setItem('token', data.token)
+                window.location.href = '/profilePage'
+            } else {
+                alert(data.msg)
+                e.target.reset()
+            }
+        } catch (err) {
+            console.log(err)
+            alert('Erro ao tentar realizar login')
+        }
+    })
+</script>
