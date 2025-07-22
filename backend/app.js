@@ -38,7 +38,7 @@ const homeController = require('./controllers/home')
 
 //Definindo as rotas e passando variáveis com app e controladores.
 const usuarioRoutes = require('./routes/usuario')(app, usuarioController, authMiddleware)
-const homeRoutes = require('./routes/home')(app, homeController)
+const homeRoutes = require('./routes/home')(app, homeController, authMiddleware)
 
 // Colocando o servidor no ar.
 app.listen(3000,()=>{
