@@ -10,4 +10,7 @@ module.exports = {
     sigin(req,res){
         res.render('pages/sigin')
     },
+    homePage(req,res){
+        res.render("pages/homePage")
+    }
 }

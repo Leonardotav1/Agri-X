@@ -34,7 +34,7 @@ const btn_page_cadastro = document.querySelector("#btn_login_sigin").addEventLis
     document.getElementById('form_login').addEventListener('submit', async function(e){
         e.preventDefault()
         
-        const nome = e.target.nome.value
+        const name = e.target.name.value
         const email = e.target.email.value
         const dataNasc = e.target.dataNasc.value
         const senha = e.target.senha.value
@@ -46,7 +46,7 @@ const btn_page_cadastro = document.querySelector("#btn_login_sigin").addEventLis
                 headers:{
                     'Content-Type':'application/json'
                 },
-                body: JSON.stringify({ nome, dataNasc, email, senha, repSenha })
+                body: JSON.stringify({ name, dataNasc, email, senha, repSenha })
             })
 
             const data = await res.json()

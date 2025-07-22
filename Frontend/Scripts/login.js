@@ -34,6 +34,8 @@ document.querySelector("#btn_login_sigin").addEventListener("click", () => {
                     window.location.href = '/homePage'
                 }
            
+            }else{
+                alert(data.msg)
             }
 
         } catch (err) {

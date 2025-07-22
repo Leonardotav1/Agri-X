@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt')
 
     //Criação do objeto Usuario, com todos os atributos.
     const UsuarioSchema = new mongoose.Schema({
-        nome:{
+        name:{
             type:String,
             required:true
         },
