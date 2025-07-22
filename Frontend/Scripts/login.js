@@ -2,6 +2,7 @@ document.querySelector("#btn_login_sigin").addEventListener("click", () => {
         window.location.href = '/sigin'
     })
 
+    // Função responsável pelo login do usuário
     document.getElementById('form_login').addEventListener('submit', async function(e) {
         e.preventDefault()
 
@@ -22,17 +23,7 @@ document.querySelector("#btn_login_sigin").addEventListener("click", () => {
              
             if(res.ok){
                 localStorage.setItem('token', token)
-
-                const check = await fetch("/profile", {
-                    method:'GET',
-                    headers:{
-                        'Authorization':`Bearer ${token}`
-                    }
-                })
-
-                if(check.ok){
-                    window.location.href = '/homePage'
-                }
+                window.location.href = '/homePage'
            
             }else{
                 alert(data.msg)
