@@ -7,11 +7,6 @@ const bcrypt = require('bcrypt')
             type:String,
             required:true
         },
-        dataNasc:{
-            type:Date,
-            required:true,
-            default: Date.now
-        },
         email:{
             type:String,
             required:true,

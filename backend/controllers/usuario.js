@@ -3,15 +3,18 @@ const moongose = require('mongoose')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const authMiddleware = require('../middlewares/authMiddleware')
+const usuario = require('../models/usuario')
 
 module.exports ={
         // Controller para cadastrar um novo Usuário.
         async cadastro(req,res){
-            const { name, email, dataNasc, senha, repSenha } = req.body
+            const { name, email, senha, repSenha } = req.body
 
             try{
                 // Compara os campos "senha" e "repSenha".
                 if(senha !== repSenha) return res.status(401).json({ msg: 'Senha incorreta, tente novamente' })
+
+                if(await usuario.findOne({email})) return res.status(401).json({ msg: 'Já existe um usuário com esse email!' })
 
                 try{
                     //Criptografia de senha
@@ -22,7 +25,6 @@ module.exports ={
                     Usuario.create({ 
                         name,
                         email,
-                        dataNasc,
                         senha: hashPass 
                     })
                     res.json({ msg: 'Cadastro realizado com sucesso' })
