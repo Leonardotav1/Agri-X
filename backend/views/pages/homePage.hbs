@@ -1,0 +1,96 @@
+<link rel="stylesheet" href="public/Styles/home_page.css">
+
+<aside>
+    <div class="div_menu">
+        <img src="public/Assets/Images/Logo Header.png" alt="" width="130px">
+        <nav>
+            <a href="#" class="active">Dashboard</a>
+            <a href="#">Produção agrícola</a>
+            <a href="#">Pecuária</a>
+            <a href="#">Financeiro</a>
+            <a href="#">Estoque</a>
+            <a href="#">Mapa</a>
+            <a href="#">Funcionários</a>
+            <a href="#">Contate-nos</a>
+            <a href="#">Configurações</a>
+            <a href="#">Conta</a>
+        </nav>
+    </div>
+    <a style="color:white; text-decoration:none">Sair</a>
+</aside>
+
+<main>
+    <header>
+        <div class="title_name" style="display: flex; gap:10px ">
+           <h1>Bem Vindo, <h1 id="name_user"> </h1> </h1> 
+        </div>
+        
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar" />
+            <span>🔔</span>
+            <span style="width: 20px; height: 20px; background: #555; border-radius: 50%; display: inline-block;"></span>
+        </div>
+    </header>
+
+    <div class="grid">
+        <div class="card" style="position: relative;">
+            <h3 style="display: flex; justify-content: space-between; align-items: center;">
+            Lista de Atividades
+                <button style="
+                background: black;
+                color: white;
+                border: none;
+                border-radius: 50%;
+                width: 24px;
+                height: 24px;
+                font-size: 18px;
+                line-height: 24px;
+                text-align: center;
+                cursor: pointer;
+                ">+</button>
+            </h3>
+            <ul style="margin-top: 10px;">
+                <p>Alimentar o gado</p>
+                <p>Colocar água na caixa</p>
+                <p>Comprar pesticida</p>
+                <p>Separar as novilhas</p>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Produtividade</h3>
+            <div class="chart"></div>
+        </div>
+
+        <div class="card">
+            <h3>Relatórios</h3>
+            <div class="chart"></div>
+        </div>
+
+        <div class="card weather">
+            <small>Santa Helena - Paraíba</small>
+            <strong>Segunda</strong>
+            <span>10 Dez, 2025 - 14:21</span>
+            <h2>30°C</h2>
+            <p>Parcialmente Nublado</p>
+            <p>Chuva 35%</p>
+            <p>Ventos 12 km/h Nordeste</p>
+        </div>
+
+        <div class="card">
+            <h3>Animais</h3>
+            <div class="pie"></div>
+            <table>
+                <tr><th>Animal</th><th>Qtd</th><th>%</th></tr>
+                <tr><td>Bezerros</td><td>50</td><td>50%</td></tr>
+                <tr><td>Vacas</td><td>50</td><td>50%</td></tr>
+                <tr><td>Bois</td><td>50</td><td>50%</td></tr>
+                <tr><td>Cavalos</td><td>50</td><td>50%</td></tr>
+                <tr><td>Jumentos</td><td>50</td><td>50%</td></tr>
+                <tr><td>Azilados</td><td>50</td><td>50%</td></tr>
+            </table>
+        </div>
+    </div>
+  </main>
+
+  <script src="/Scripts/home-page.js"></script>

@@ -2,14 +2,17 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const consign = require('consign')
-const app = express()
 const path = require('path')
 const exphbs = require('express-handlebars')
+const cors = require('cors')
+
+const app = express()
+app.use(cors())
+require('dotenv').config()
 
 //Configurações gerais
 app.use(express.json())
-app.use(express.urlencoded({extended:true}))
-require('dotenv').config()
+app.use(express.urlencoded({ extended:true }))
 
 //Configuração da engine handlebars
 app.engine('hbs', exphbs.engine({
@@ -35,7 +38,7 @@ const homeController = require('./controllers/home')
 
 //Definindo as rotas e passando variáveis com app e controladores.
 const usuarioRoutes = require('./routes/usuario')(app, usuarioController, authMiddleware)
-const homeRoutes = require('./routes/home')(app, homeController)
+const homeRoutes = require('./routes/home')(app, homeController, authMiddleware)
 
 // Colocando o servidor no ar.
 app.listen(3000,()=>{

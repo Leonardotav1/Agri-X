@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Kotta+One&family=Poly&family=Krona+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.janela_modal{
+    display:none;
+    position:fixed;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.modal{ 
+    display: flex;
+    position: fixed;
+    z-index: 999;
+}
+.janela_planos{
+    display: none;
+    flex-direction: column;
+    background: linear-gradient(180deg, rgb(87,148,7), rgb(154,189,81));
+    color: white;
+    width: 50vw;
+    align-items: center;
+    border-radius: 20px;
+    border: 5px solid #ffffff;
+}
+.janela_planos h1{
+    font:300 4em 'Poly';
+    margin: 3vh 0;
+}
+.janela_planos h2{
+    font: 200 2em var(--fonte-2);
+}
+.preco{
+    margin-bottom: 4vh;
+}
+.moeda, .valor{
+    font: 400 4.5rem var(--fonte-3);
+}
+.data{
+    font:400 2.5rem var(--fonte-3);
+}
+.btn_modal{
+    display: flex;
+    color: white;
+    background-color: #4E7609;
+    font: 400 2.5vw var(--fonte-3);
+    border: none;
+    border: 2px solid #345200;
+    padding: 0.5vw 4vw;
+    border-radius: 10px;
+    cursor:pointer;
+    transition:all 0.3s ease-in-out;
+}
+.btn_modal:hover{
+    background-color:#426309;
+    cursor: pointer;
+}
+.title_beneficios{
+    display: flex;
+    font: 400 2.5em var(--fonte-3);
+    margin-top: 5vh;
+    justify-content: start;
+}
+.janela_modal hr{
+    display: flex;
+    width: 85%;
+    margin: 0%;
+}
+.beneficios{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    gap: 1vh;
+    margin-top: 3vh;
+    margin-bottom: 5vh ;
+}
+.informations{
+    display: flex;
+    flex-direction: column;
+}
+.janela_modal p{
+    margin: 7px;
+    font: 100 2em 'Inter';
+}
+.informations span{
+    font: 300 1.2em 'Inter';
+    margin-left: 10px;
+}

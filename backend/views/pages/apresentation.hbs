@@ -44,29 +44,127 @@
         </div>
     </section>
 
-    <section id=Planos>
+    <section id="Planos">
         <div id="text-planos">
             <h1>Nossos planos!</h1>
             <h2>Clique e conheça as vantagens</h2>
         </div>
         <div id="Planos-val">
-            <div id="Anual-plan" class="valores">
+            <div id="anual-plan" class="valores">
                 <h2>Anual</h2>
-                <h3>R$45,00</h3>
+                <h3>R$40,00</h3>
             </div>
             <hr>
             <div id="Semestral-plan" class="valores">
                 <h2>Semestral</h2>
-                <h3>R$50,00</h3>
+                <h3>R$60,00</h3>
             </div>
             <hr>
             <div id="Mensal-plan" class="valores">
                 <h2>Mensal</h2>
-                <h3>R$60,00</h3>
+                <h3>R$80,00</h3>
             </div>
         </div>
     </section>
 
+    {{!-- Janela modal (onde irá os planos) --}}
+    <div id="janela_modal" class="janela_modal">
+        
+    </div>
+
+    {{!-- Plano Anual --}}
+    <div id="plano_anual" class="janela_planos" >
+        <h1>Anual</h1>
+        <div class="preco">
+            <span class="moeda">R$</span>
+            <span class="valor">40,00</span>
+            <span class="data">/mês</span>
+        </div>
+        <button class="btn_modal">Assinar Plano</button>
+        <div class="title_beneficios">Benefícios</div>
+        <hr>
+        <div class="beneficios">
+            <div class="informations">
+                <p>✅ Descontos Especiais</p>
+                <span>- Preço com desconto exclusivo em comparação ao plano mensal (20% mais barato no total).</span>
+                <span>- Isenção de taxas de ativação ou configuração.</span>
+            </div>
+            <div class="informations">
+                <p>✅ Acesso completo a funcionalidades premium</p>
+                <span>- Gestão de safra avançada, com análises preditivas.</span>
+                <span>- Relatórios detalhados de produtividade, clima, e solo.</span>
+            </div>
+            <div class="informations">
+                <p>✅ Suporte técnico prioritário</p>
+                <span>- Atendimento com prioridade no suporte.</span>
+                <span>- Canal direto com especialista agrícola.</span>
+                <span>- Atendimento via WhatsApp ou telefone, além do e-mail.</span>
+            </div>
+        </div>
+    </div>
+
+    {{!-- Plano Semestral --}}
+    <div id="plano_semestral" class="janela_planos" >
+        <h1>Semestral</h1>
+        <div class="preco">
+            <span class="moeda">R$</span>
+            <span class="valor">60,00</span>
+            <span class="data">/mês</span>
+        </div>
+        <button class="btn_modal">Assinar Plano</button>
+        <div class="title_beneficios">Benefícios</div>
+        <hr>
+        <div class="beneficios">
+            <div class="informations">
+                <p>✅ Desconto sobre o valor mensal</p>
+                <span>- Pague menos comparado ao plano mensal — economia de até 10% no total.</span>
+                <span>- Sem taxas adicionais de ativação.</span>
+            </div>
+            <div class="informations">
+                <p>✅ Acesso às principais funcionalidades</p>
+                <span>- Gestão de safra, controle de estoque e financeiro</span>
+                <span>- Cadastro de talhões, atividades e aplicação de insumos.</span>
+                <span>- Relatórios de produtividade e custos por cultura.</span>
+            </div>
+            <div class="informations">
+                <p>✅ Suporte técnico com prioridade intermediária</p>
+                <span>- Atendimento mais rápido que o plano mensal.</span>
+                <span>- Suporte via e-mail e WhatsApp durante horário comercial.</span>
+            </div>
+        </div>
+    </div>
+
+    {{!-- Plano Mensal --}}
+    <div id="plano_mensal" class="janela_planos">
+        <h1>Plano Mensal</h1>
+        <div class="preco">
+            <span class="moeda">R$</span>
+            <span class="valor">80,00</span>
+            <span class="data">/mês</span>
+        </div>
+        <button class="btn_modal">Assinar Plano</button>
+        <div class="title_beneficios">Benefícios</div>
+        <hr>
+        <div class="beneficios">
+            <div class="informations">
+                <p>✅ Flexibilidade total</p>
+                <span>- Contratação sem fidelidade: cancele ou altere o plano quando quiser.</span>
+                <span>- Ideal para testar o sistema ou usar em períodos específicos da safra.</span>
+            </div>
+            <div class="informations">
+                <p>✅ Acesso às funcionalidades essenciais</p>
+                <span>- Cadastro de áreas, culturas e atividades.</span>
+                <span>- Controle básico de estoque e aplicação de insumos.</span>
+                <span>- Relatórios simples de produtividade e despesas.</span>
+            </div>
+            <div class="informations">
+                <p>✅ Suporte técnico padrão</p>
+                <span>- Atendimento via e-mail e dentro do horário comercial.</span>
+                <span>- Resposta em até 48h úteis.</span>
+            </div>
+        </div>
+    </div>
+    
     <section id="depoimentos">
         <div id="text-card4">
             <div id="title-text">
@@ -77,22 +175,25 @@
         </div>
         <div id="cards">
             <div class="cards-dp">
-                <h1>Fulano de town</h1>
+                <h1>João da Silva</h1>
+                <img src="../public/Assets/Images/Icon-cliente.png" alt="">
+                <!-- Aqui vão as estrelas de avaliação -->
+                <h2>Um ótimo sistema, completo, prático e rápido de usar</h2>
+            </div>
+            <div class="cards-dp">
+                <h1>Maria José</h1>
                 <img src="../public/Assets/Images/Icon-cliente.png" alt="">
                 <!-- Aqui vão as estrelas de avaliação -->
                 <h2>Um dos melhores sistemas que já usei, muito rápido e prático</h2>
             </div>
             <div class="cards-dp">
-                <h1>Fulano de town</h1>
+                <h1>Leonardo Lopes</h1>
                 <img src="../public/Assets/Images/Icon-cliente.png" alt="">
                 <!-- Aqui vão as estrelas de avaliação -->
-                <h2>Um dos melhores sistemas que já usei, muito rápido e prático</h2>
-            </div>
-            <div class="cards-dp">
-                <h1>Fulano de town</h1>
-                <img src="../public/Assets/Images/Icon-cliente.png" alt="">
-                <!-- Aqui vão as estrelas de avaliação -->
-                <h2>Um dos melhores sistemas que já usei, muito rápido e prático</h2>
+                <h2>Bom, funcionalidades ótimas, baixo custo, amei</h2>
             </div>
         </div>
+
     </section>
+
+    <script src="/Scripts/initial-page.js"></script>
