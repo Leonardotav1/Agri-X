@@ -24,6 +24,6 @@ btns_planos.forEach((el, i) => {
     })
 })
 
-const btn_card_1 = document.querySelector("#btn-card1").addEventListener("click", ()=>{
-            window.location.href = '/sigin'
+const btn_card_1 = document.querySelector("#btn-card1").addEventListener("click", ()=>{ 
+    window.location.href = '/sigin'
 })
