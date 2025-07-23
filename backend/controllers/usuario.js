@@ -12,7 +12,7 @@ module.exports ={
 
             try{
                 // Compara os campos "senha" e "repSenha".
-                if(senha !== repSenha) return res.status(401).json({ msg: 'Senha incorreta, tente novamente' })
+                if(senha !== repSenha) return res.status(401).json({ msg: 'Senha incorreta, tente novamente!' })
 
                 if(await usuario.findOne({email})) return res.status(401).json({ msg: 'Já existe um usuário com esse email!' })
 
@@ -34,7 +34,8 @@ module.exports ={
                 }
 
             }catch(err){
-                console.log(err)
+                res.status(500).json({ msg: 'Erro interno' })
+                
             } 
         },
         //Rota para logar o usuário com base no email e senha.
@@ -60,6 +61,7 @@ module.exports ={
                 return res.status(500).json({ msg: 'Erro interno ao realizar o login' })
             }
         },
+        //Rota para verficação de 
         async profile(req,res) {
            try{
                 const usuario = await Usuario.findById(req.userId).select('-senha')
