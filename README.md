@@ -23,6 +23,7 @@ git clone https://github.com/Leonardotav1/Agri-X.git
 Após isso entre na pasta backend e rode o seguinte comando:
 ```
 cd backend
+npm install
 nodemon dev
 ```
 
